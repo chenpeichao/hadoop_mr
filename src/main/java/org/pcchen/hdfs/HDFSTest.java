@@ -24,8 +24,9 @@ public class HDFSTest {
         try {
             System.setProperty("HADOOP_USER_NAME", "chenpeichao");
             FileSystem fs = FileSystem.get(conf);
-//            fs.copyToLocalFile(false, new Path("/user/chenpeichao/hellospark"), new Path("e:/hellospark"), true);
+            //本地文件上传到hdfs和下载到window文件目录
 //            fs.copyFromLocalFile(new Path("e:/operationsanalysis.jar"), new Path("/user/chenpeichao/"));
+//            fs.copyToLocalFile(false, new Path("/user/chenpeichao/hellospark"), new Path("e:/hellospark"), true);
 
             //创建文件夹时，对于文件进行权限赋予
             FsPermission fsPermission = new FsPermission(FsAction.ALL, FsAction.ALL, FsAction.ALL);
